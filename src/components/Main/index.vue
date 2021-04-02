@@ -1,15 +1,16 @@
 <template>
   <main>
     <header class="header"></header>
-    <aside class="left-layout"></aside>
+    <sidebar></sidebar>
     <section class="content">
-      <router-view />
+      <CanvasPanel />
     </section>
     <aside class="right-layout"></aside>
   </main>
 </template>
 <script setup>
-import SideBar from '@/components/SideBar/index.vue'
+import Sidebar from '@/components/Sidebar/index.vue'
+import CanvasPanel from '@/components/CanvasPanel/index.vue'
 </script>
 <style lang="scss" type="text/scss" scoped>
 .header {
@@ -22,17 +23,6 @@ import SideBar from '@/components/SideBar/index.vue'
   box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
   z-index: 99999;
 }
-
-.left-layout {
-  position: absolute;
-  left: 0;
-  top: 60px;
-  bottom: 0;
-  width: 80px;
-  background: #fff;
-  z-index: 99998;
-}
-
 .right-layout {
   position: absolute;
   right: 0;

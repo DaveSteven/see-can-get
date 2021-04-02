@@ -10,7 +10,7 @@ import Main from './components/Main/index.vue'
 </script>
 <style lang="scss" type="text/scss">
 body {
-  background: #f5f5f5;
+  background: #f1f3f7;
   overflow: hidden;
 }
 </style>

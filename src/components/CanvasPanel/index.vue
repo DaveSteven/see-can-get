@@ -6,7 +6,7 @@ import { ref, onMounted } from 'vue'
 
 const canvas = ref(null)
 
-function calculatePanelSize({ el, width, height, scale }) {
+const calculatePanelSize = ({ el, width, height, scale }) => {
   const parent = el.offsetParent
   const pWidth = parent.clientWidth
   const pHeight = parent.clientHeight
@@ -43,7 +43,7 @@ onMounted(() => {
 #canvas-panel {
   position: absolute;
   background: #fff;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 </style>

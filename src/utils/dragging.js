@@ -1,6 +1,6 @@
 export default {
     install(app) {
-        app.directive('drag', (el, binding) => {
+        app.directive('dragging', (el, binding) => {
             el.addEventListener('mousedown', (event) => {
                 event.stopPropagation()
                 const oDiv = event.target
@@ -10,6 +10,8 @@ export default {
                     let left = e.clientX - disX
                     let top = e.clientY - disY
 
+                    oDiv.style.position = 'absolute'
+                    oDiv.style.cursor = 'move'
                     oDiv.style.left = `${left}px`
                     oDiv.style.top = `${top}px`
                 }
